@@ -1,21 +1,5 @@
 self.__precacheManifest = [
   {
-    "revision": "208d887c12c9e363462e",
-    "url": "app-view.208d887c.js"
-  },
-  {
-    "revision": "2bc180b6ed5ff1cdc2be",
-    "url": "main.2bc180b6.js"
-  },
-  {
-    "revision": "3609eddf895066e32100",
-    "url": "vendors~app-view.3609eddf.js"
-  },
-  {
-    "revision": "eefa8a8d944d0311f4b6",
-    "url": "vendors~mapbox-gl.eefa8a8d.js"
-  },
-  {
     "revision": "79106fd9b808b3bbd70d54b934850301",
     "url": "vendor/custom-elements-es5-adapter.js"
   },
@@ -40,11 +24,11 @@ self.__precacheManifest = [
     "url": "vendor/bundles/webcomponents-sd-ce.js"
   },
   {
-    "revision": "894a294495257c3d389efa3e1bd9bde7",
-    "url": "vendor/webcomponents-bundle.js"
-  },
-  {
     "revision": "3a28d79ed7dae933323bcabb6ad3dade",
     "url": "vendor/bundles/webcomponents-sd-ce-pf.js"
+  },
+  {
+    "revision": "894a294495257c3d389efa3e1bd9bde7",
+    "url": "vendor/webcomponents-bundle.js"
   }
 ];
