@@ -1,7 +1,7 @@
 {
-  "name": "Geoportal PL",
-  "short_name": "Geoportal PL",
-  "description": "Geoportal PL",
+  "name": "Geoportal 24",
+  "short_name": "Geoportal 24",
+  "description": "Geoportal 24",
   "icons": [
     {
       "src": "assets/manifest/icon-192x192.png",
