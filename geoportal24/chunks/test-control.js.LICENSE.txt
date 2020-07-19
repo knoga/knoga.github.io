@@ -1,1 +1,0 @@
-/*! Full Tilt v0.7 / http://github.com/richtr/Full-Tilt */
