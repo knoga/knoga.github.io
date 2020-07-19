@@ -1,0 +1,6 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{64:function(n,t,e){"use strict";e.r(t),e.d(t,"TestControl",(function(){return c}));e(58);var i=e(39),o=e(3),a=function(n,t,e,i){return new(e||(e=Promise))((function(o,a){function c(n){try{s(i.next(n))}catch(n){a(n)}}function r(n){try{s(i.throw(n))}catch(n){a(n)}}function s(n){var t;n.done?o(n.value):(t=n.value,t instanceof e?t:new e((function(n){n(t)}))).then(c,r)}s((i=i.apply(n,t||[])).next())}))};class c{constructor(){}onAdd(n){return this._container=document.createElement("div"),this._container.className="mapboxgl-ctrl",this.__init(this._container),this._container}__init(n){Object(o.c)(i.c`
+                <vaadin-button
+                    @click=${t=>a(this,void 0,void 0,(function*(){if(DeviceOrientationEvent){const t=t=>{const{gamma:e,beta:i,alpha:o}=t;n.innerText=`gamma: ${e}, beta: ${i}, alpha: ${o}`};if("function"==typeof DeviceOrientationEvent.requestPermission){"granted"===(yield DeviceOrientationEvent.requestPermission())&&window.addEventListener("deviceorientation",t,!1)}else window.addEventListener("deviceorientation",t,!1)}}))}
+                    >Orientation</vaadin-button
+                >
+            `,n)}onRemove(){this._container.parentNode.removeChild(this._container)}}}}]);

@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "vendor/bundles/webcomponents-sd-ce.js"
   },
   {
-    "revision": "894a294495257c3d389efa3e1bd9bde7",
-    "url": "vendor/webcomponents-bundle.js"
-  },
-  {
     "revision": "3a28d79ed7dae933323bcabb6ad3dade",
     "url": "vendor/bundles/webcomponents-sd-ce-pf.js"
+  },
+  {
+    "revision": "894a294495257c3d389efa3e1bd9bde7",
+    "url": "vendor/webcomponents-bundle.js"
   },
   {
     "revision": "69fa52c9b1ebe0d28af7d84323fb887e",
