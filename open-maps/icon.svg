@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Open Maps app icon (master). Full-bleed square: iOS and Android apply their own mask.
+       The pin sits inside the maskable safe zone (circle r = 40 % of the size).
+       scripts/generate-icons.mjs renders the PNGs and derives favicon.svg from this file. -->
   <defs>
-    <clipPath id="corner"><rect width="1024" height="1024" rx="230"/></clipPath>
     <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
       <stop offset="0" stop-color="#3d9bff"/>
       <stop offset="1" stop-color="#0058d6"/>
@@ -13,18 +15,22 @@
       <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#00245c" flood-opacity="0.35"/>
     </filter>
   </defs>
-  <g id="art" clip-path="url(#corner)">
+  <g id="art">
     <rect width="1024" height="1024" fill="url(#bg)"/>
+    <!-- Contour lines: a quiet topographic texture around the pin, off-centre like real terrain. -->
     <g fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="12">
       <path d="M 809 430 C 813 475, 795 534, 767 572 C 740 610, 687 639, 643 657 C 598 676, 548 685, 500 685 C 452 686, 398 679, 357 658 C 315 638, 275 600, 251 562 C 227 524, 214 475, 213 430 C 211 385, 218 333, 240 292 C 262 251, 303 206, 346 185 C 390 164, 452 161, 500 167 C 548 172, 592 197, 632 219 C 673 242, 713 266, 742 301 C 772 337, 805 385, 809 430 Z"/>
       <path d="M 937 445 C 941 505, 906 583, 867 632 C 827 681, 758 714, 700 739 C 641 764, 578 781, 515 783 C 452 785, 379 777, 324 750 C 269 723, 217 671, 185 620 C 153 569, 135 505, 131 445 C 127 385, 132 312, 162 258 C 192 204, 252 145, 311 120 C 370 95, 452 100, 515 108 C 578 116, 632 144, 687 171 C 742 198, 804 223, 846 269 C 888 315, 934 385, 937 445 Z"/>
       <path d="M 1063 462 C 1063 538, 1011 630, 960 690 C 909 750, 828 791, 757 823 C 685 855, 607 881, 530 884 C 453 887, 361 875, 292 841 C 224 807, 160 744, 119 681 C 77 617, 46 538, 41 462 C 35 386, 43 291, 83 225 C 123 159, 207 94, 282 66 C 356 39, 453 50, 530 58 C 607 67, 675 89, 746 118 C 817 147, 906 177, 959 234 C 1012 292, 1063 386, 1063 462 Z"/>
       <path d="M 1192 480 C 1185 572, 1110 674, 1048 745 C 985 817, 901 867, 817 909 C 734 952, 641 994, 548 1000 C 455 1006, 340 986, 258 943 C 175 900, 104 820, 53 743 C 1 666, -41 572, -49 480 C -57 388, -47 269, 4 191 C 54 113, 164 44, 255 13 C 346 -17, 455 0, 548 7 C 641 14, 725 24, 815 55 C 905 86, 1025 122, 1088 193 C 1151 264, 1199 388, 1192 480 Z"/>
     </g>
+    <!-- Ground shadow under the tip. -->
     <ellipse cx="512" cy="872" rx="78" ry="20" fill="#00245c" fill-opacity="0.28"/>
+    <!-- Route: from a start node in the lower left to the pin's tip. -->
     <path d="M 222 760 C 230 880, 340 930, 430 896 S 498 862, 512 864" fill="none" stroke="#ffffff"
       stroke-opacity="0.8" stroke-width="34" stroke-linecap="round"/>
     <circle cx="222" cy="738" r="38" fill="#2a86f8" stroke="#ffffff" stroke-width="26"/>
+    <!-- Pin: circle r=210 at (512, 420), tangent lines meeting at (512, 840). -->
     <path filter="url(#lift)" fill="#ffffff" stroke="#ffffff" stroke-width="36" stroke-linejoin="round"
       d="M 512 840 L 330.1 525 A 210 210 0 1 1 693.9 525 Z"/>
     <circle cx="512" cy="420" r="86" fill="url(#hole)"/>
