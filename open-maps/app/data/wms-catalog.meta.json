@@ -4,7 +4,7 @@
     "https://mapy.geoportal.gov.pl/gpsr-web/gpsr/katalogWMTS?f=json",
     "https://mapy.geoportal.gov.pl/wss/service/CSWINSP/guest/CSWStartup?service=CSW&version=2.0.2&request=GetRecords&typeNames=csw%3ARecord&resultType=results&elementSetName=full&constraintLanguage=CQL_TEXT&constraint_language_version=1.1.0&constraint=type+%3D+%27service%27+AND+%28Subject+%3D+%27WMS%27+OR+Subject+%3D+%27WMTS%27%29&maxRecords=500"
   ],
-  "downloaded": "2026-10-10T18:25:43.280Z",
+  "downloaded": "2026-10-10T18:34:55.094Z",
   "register": 262,
   "csw": 76,
   "duplicates": 19,
