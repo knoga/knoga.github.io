@@ -1364,8 +1364,8 @@
           <div class="section-head reveal">
             <h2 id="features-title">Wszystko, czego potrzebujesz od mapy</h2>
             <p>
-              Od codziennych spraw w mieście po wyjście w góry. Bez logowania, bez płatnych funkcji
-              i bez wyskakujących reklam.
+              Od codziennych spraw w mieście, przez pomoc w nagłej sytuacji, po wyjście w góry. Bez
+              logowania, bez płatnych funkcji i bez wyskakujących reklam.
             </p>
           </div>
 
@@ -1431,6 +1431,67 @@
 
             <article
               class="feature feature--flip reveal"
+              style="--tint: var(--tint-red)"
+              aria-labelledby="f-safety"
+            >
+              <div class="feature__text">
+                <p class="badge">
+                  <span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-ecg_heart" /></svg></span
+                  >Bezpieczeństwo
+                </p>
+                <h2 id="f-safety">Pomoc w pobliżu, gdy liczy się czas</h2>
+                <p class="feature__lead">
+                  Sprawdź, gdzie jest najbliższy schron, miejsce ukrycia albo defibrylator i jak do
+                  niego dojść. Gdy trzeba wezwać pomoc, wyślesz swoją lokalizację SMS-em albo podasz
+                  dyspozytorowi 112 współrzędne, adres i Plus Code. Udostępnianie lokalizacji działa
+                  także bez internetu.
+                </p>
+                <ul class="checks">
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Schrony
+                    i miejsca ukrycia z rejestru Państwowej Straży Pożarnej
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
+                    >Defibrylatory AED i droga do najbliższego
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Zasięg
+                    pieszo: dokąd dojdziesz w 1, 3 i 5 minut
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Twoja
+                    lokalizacja SMS-em i przycisk „Zadzwoń 112”
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
+                    >Ostrzeżenia pogodowe IMGW dla powiatu i radar opadów
+                  </li>
+                </ul>
+                <p class="note">W nagłym wypadku zawsze najpierw dzwoń pod numer alarmowy 112.</p>
+              </div>
+              <div class="feature__art">
+                <figure class="phone">
+                  <div class="phone__screen">
+                    <div class="phone__status" aria-hidden="true">
+                      9:41<svg viewBox="0 0 60 14"><use href="#status-icons" /></svg>
+                    </div>
+                    <img
+                      src="shots/safety.webp"
+                      alt="Defibrylatory i schrony na mapie, karta defibrylatora z przyciskiem „Zadzwoń 112”"
+                      width="390"
+                      height="844"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </figure>
+              </div>
+            </article>
+
+            <article
+              class="feature reveal"
               style="--tint: var(--tint-green)"
               aria-labelledby="f-routes"
             >
@@ -1499,7 +1560,7 @@
             </article>
 
             <article
-              class="feature reveal"
+              class="feature feature--flip reveal"
               style="--tint: var(--tint-blue)"
               aria-labelledby="f-transit"
             >
@@ -1554,7 +1615,7 @@
             </article>
 
             <article
-              class="feature feature--flip reveal"
+              class="feature reveal"
               style="--tint: var(--tint-brown)"
               aria-labelledby="f-mountains"
             >
@@ -1605,61 +1666,6 @@
                     <img
                       src="shots/mountains.webp"
                       alt="Tatry w 3D ze szlakami i kartą Kasprowego Wierchu z pogodą"
-                      width="390"
-                      height="844"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </figure>
-              </div>
-            </article>
-
-            <article
-              class="feature reveal"
-              style="--tint: var(--tint-red)"
-              aria-labelledby="f-safety"
-            >
-              <div class="feature__text">
-                <p class="badge">
-                  <span
-                    ><svg class="icon" aria-hidden="true"><use href="#i-ecg_heart" /></svg></span
-                  >Bezpieczeństwo
-                </p>
-                <h2 id="f-safety">Kiedy liczy się czas</h2>
-                <p class="feature__lead">
-                  Najbliższy defibrylator albo schron, z drogą dojścia. Gdy trzeba wezwać pomoc,
-                  aplikacja pokaże Twoje współrzędne, adres i Plus Code do podania pod numer 112.
-                </p>
-                <ul class="checks">
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Defibrylatory AED i droga do najbliższego
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Schrony
-                    i miejsca schronienia z danych Państwowej Straży Pożarnej
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Zasięg
-                    pieszo: dokąd dojdziesz w 1, 3 i 5 minut
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Ostrzeżenia pogodowe IMGW dla powiatu i radar opadów
-                  </li>
-                </ul>
-                <p class="note">W nagłym wypadku zawsze najpierw dzwoń pod numer alarmowy 112.</p>
-              </div>
-              <div class="feature__art">
-                <figure class="phone">
-                  <div class="phone__screen">
-                    <div class="phone__status" aria-hidden="true">
-                      9:41<svg viewBox="0 0 60 14"><use href="#status-icons" /></svg>
-                    </div>
-                    <img
-                      src="shots/safety.webp"
-                      alt="Defibrylatory i schrony na mapie, karta defibrylatora z przyciskiem „Zadzwoń 112”"
                       width="390"
                       height="844"
                       loading="lazy"
