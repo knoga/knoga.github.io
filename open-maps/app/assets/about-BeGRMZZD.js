@@ -1,0 +1,1 @@
+var e=`krz.noga@gmail.com`,t=`https://www.openstreetmap.org/fixthemap`;function n(e,t){return new URL(`../`,new URL(e,t)).href}var r=n(`/open-maps/app/`,window.location.origin);function i(e,t=r){return e===`en`?new URL(`en/`,t).href:t}export{t as n,i as r,e as t};
