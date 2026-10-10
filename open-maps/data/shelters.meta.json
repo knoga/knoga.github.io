@@ -1,0 +1,11 @@
+{
+  "source": "https://gdziesieukryc.pl/PS_XML/punkty_schronienia.csv",
+  "dataset": "https://dane.gov.pl/pl/dataset/28058",
+  "licence": "CC BY 4.0",
+  "attribution": "Punkty schronienia: KG PSP (CC BY 4.0)",
+  "sourceModified": "2026-10-07T18:10:34.000Z",
+  "downloaded": "2026-10-10T00:04:22.065Z",
+  "count": 86702,
+  "etag": "W/\"e8a9d4-1a1178f6102\"",
+  "dropped": {}
+}
