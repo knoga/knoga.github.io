@@ -1,1 +1,0 @@
-import{fo as e}from"./index-CO7Ioe5g.js";import{t}from"./download-DfpjSKSd.js";import{c as n,l as r,r as i,t as a}from"./export-C2dCU1FH.js";function o(o,s){let c=new Date,l=e(`places.savedTitle`),u=s===`gpx`?r(o,l,c.toISOString()):n(o,l),d=c.toISOString().slice(0,10);t(u,a[s],i(`${l} ${d}`,s))}export{o as downloadPlaces};
