@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Home-screen web app on iOS. The status bar stays opaque: with `black-translucent`
+         iOS 26 sizes the viewport 62 pt short and paints nothing below it (ADR 0021). -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Open Maps" />
+    <meta
+      name="description"
+      content="Open Maps — szybka, otwarta aplikacja mapowa działająca w przeglądarce i jako PWA."
+    />
+    <link rel="icon" href="/open-maps/app/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/open-maps/app/apple-touch-icon.png" />
+    <title>Open Maps</title>
+    <script type="module" crossorigin src="/open-maps/app/assets/index-CMaj0Any.js"></script>
+    <link rel="modulepreload" crossorigin href="/open-maps/app/assets/maplibre-DdvYXgnn.js">
+    <link rel="stylesheet" crossorigin href="/open-maps/app/assets/maplibre-B8-mEBLf.css">
+    <link rel="stylesheet" crossorigin href="/open-maps/app/assets/index-DKb7cV25.css">
+  <link rel="manifest" href="/open-maps/app/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
+    <noscript>Open Maps wymaga włączonego JavaScriptu.</noscript>
+  </body>
+</html>
