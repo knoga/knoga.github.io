@@ -1,70 +1,70 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <!--
-      Landing page of Open Maps (ADR 0046). A plain static page deployed from landing/ to
-      the root of the site folder (/open-maps/): no framework, no trackers, no external
-      fonts or scripts. The app lives in app/, with its own PWA scope that does not
-      include this page. Screenshots: npm run landing:shots.
+      English landing page of Open Maps (ADR 0046), deployed from landing/en/ to
+      /open-maps/en/. Same sections, styles and icons as the Polish page (landing/index.html,
+      the x-default); keep the two in step. No automatic language redirect: the pages link
+      each other (hreflang, the EN/PL switch). Screenshots: npm run landing:shots (en/shots/).
     -->
-    <title>Open Maps — darmowa mapa w przeglądarce, bez konta i bez reklam</title>
+    <title>Open Maps — a free map in your browser, no account, no ads</title>
     <meta
       name="description"
-      content="Szukaj miejsc, planuj trasy, sprawdzaj odjazdy, szlaki i najbliższy defibrylator. Open Maps działa w przeglądarce i na telefonie, za darmo, bez konta i bez reklam."
+      content="Find places, plan routes, check departures, hiking trails and the nearest defibrillator. Open Maps runs in your browser and on your phone: free, no account, no ads."
     />
-    <link rel="canonical" href="https://knoga.github.io/open-maps/" />
+    <link rel="canonical" href="https://knoga.github.io/open-maps/en/" />
     <link rel="alternate" hreflang="pl" href="https://knoga.github.io/open-maps/" />
     <link rel="alternate" hreflang="en" href="https://knoga.github.io/open-maps/en/" />
     <link rel="alternate" hreflang="x-default" href="https://knoga.github.io/open-maps/" />
     <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="app/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="app/apple-touch-icon.png" />
-    <!-- The app's manifest: lets Chromium offer „Zainstaluj” here too (start_url = the app). -->
-    <link rel="manifest" href="app/manifest.webmanifest" />
+    <link rel="icon" href="../app/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../app/apple-touch-icon.png" />
+    <!-- The app's manifest: lets Chromium offer "Install" here too (start_url = the app). -->
+    <link rel="manifest" href="../app/manifest.webmanifest" />
     <link rel="preload" as="image" href="shots/map.webp" fetchpriority="high" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pl_PL" />
-    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="pl_PL" />
     <meta property="og:site_name" content="Open Maps" />
-    <meta property="og:title" content="Open Maps — darmowa mapa w przeglądarce" />
+    <meta property="og:title" content="Open Maps — a free map in your browser" />
     <meta
       property="og:description"
-      content="Bez konta, bez reklam. Trasy, komunikacja, góry i bezpieczeństwo — na telefonie i komputerze."
+      content="No account, no ads. Directions, public transport, mountains and safety — on your phone and computer."
     />
-    <meta property="og:url" content="https://knoga.github.io/open-maps/" />
-    <meta property="og:image" content="https://knoga.github.io/open-maps/og.png" />
+    <meta property="og:url" content="https://knoga.github.io/open-maps/en/" />
+    <meta property="og:image" content="https://knoga.github.io/open-maps/en/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Open Maps: darmowa mapa w przeglądarce, widok aplikacji na telefonie"
+      content="Open Maps: a free map in your browser, the app on a phone"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Open Maps — darmowa mapa w przeglądarce" />
+    <meta name="twitter:title" content="Open Maps — a free map in your browser" />
     <meta
       name="twitter:description"
-      content="Bez konta, bez reklam. Trasy, komunikacja, góry i bezpieczeństwo — na telefonie i komputerze."
+      content="No account, no ads. Directions, public transport, mountains and safety — on your phone and computer."
     />
-    <meta name="twitter:image" content="https://knoga.github.io/open-maps/og.png" />
+    <meta name="twitter:image" content="https://knoga.github.io/open-maps/en/og.png" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Open Maps",
-        "description": "Darmowa aplikacja mapowa działająca w przeglądarce: wyszukiwanie miejsc, trasy z nawigacją, odjazdy komunikacji, szlaki górskie, schrony i defibrylatory. Bez konta i bez reklam.",
+        "description": "A free map app that runs in the browser: place search, turn-by-turn directions, public transport departures, hiking trails, and defibrillators and shelters in Poland. No account and no ads.",
         "url": "https://knoga.github.io/open-maps/app/",
         "image": "https://knoga.github.io/open-maps/app/pwa-512.png",
-        "screenshot": "https://knoga.github.io/open-maps/shots/map.webp",
+        "screenshot": "https://knoga.github.io/open-maps/en/shots/map.webp",
         "applicationCategory": "TravelApplication",
-        "operatingSystem": "Android, iOS, iPadOS, Windows, macOS, Linux (przeglądarka internetowa)",
-        "browserRequirements": "Wymaga JavaScriptu i WebGL",
-        "inLanguage": "pl",
+        "operatingSystem": "Android, iOS, iPadOS, Windows, macOS, Linux (web browser)",
+        "browserRequirements": "Requires JavaScript and WebGL",
+        "inLanguage": "en",
         "isAccessibleForFree": true,
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PLN" }
       }
@@ -1199,6 +1199,29 @@
         }
       }
     </style>
+    <style>
+      /* English page only: marks what covers Poland only. */
+      .tag {
+        display: inline-block;
+        margin-left: 6px;
+        padding: 1px 8px;
+        border-radius: 999px;
+        background: var(--surface-2);
+        border: 1px solid var(--separator);
+        color: var(--muted);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        line-height: 1.5;
+        vertical-align: 0.08em;
+        white-space: nowrap;
+      }
+
+      .coverage {
+        margin-top: 14px;
+        font-size: 1rem;
+        color: var(--muted);
+      }
+    </style>
   </head>
   <body>
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
@@ -1331,36 +1354,28 @@
       <!-- ICONS:END -->
     </svg>
 
-    <a class="skip-link" href="#tresc">Przejdź do treści</a>
-
-    <!-- Shown by the script below only to browsers that prefer English over Polish. -->
-    <aside class="lang-banner" id="lang-banner" lang="en" aria-label="Language" hidden>
-      <div class="wrap lang-banner__bar">
-        <a href="en/" hreflang="en">This page is also available in English →</a>
-        <button type="button" id="lang-banner-close" aria-label="Dismiss">×</button>
-      </div>
-    </aside>
+    <a class="skip-link" href="#content">Skip to content</a>
 
     <header class="top" id="top">
       <div class="wrap top__bar">
-        <a class="brand" href="#tresc" aria-label="Open Maps, początek strony">
-          <img src="app/favicon.svg" alt="" width="32" height="32" />
+        <a class="brand" href="#content" aria-label="Open Maps, top of the page">
+          <img src="../app/favicon.svg" alt="" width="32" height="32" />
           <span class="brand__name">Open Maps</span>
         </a>
-        <nav class="top__nav" aria-label="Sekcje strony">
-          <a href="#funkcje">Funkcje</a>
-          <a href="#prywatnosc">Prywatność</a>
-          <a href="#instalacja">Instalacja</a>
-          <a href="#pytania">Pytania</a>
+        <nav class="top__nav" aria-label="Page sections">
+          <a href="#features">Features</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#install">Install</a>
+          <a href="#faq">FAQ</a>
         </nav>
-        <a class="lang-switch" href="en/" hreflang="en" lang="en" aria-label="EN, English version"
-          >EN</a
+        <a class="lang-switch" href="../" hreflang="pl" lang="pl" aria-label="PL, wersja polska"
+          >PL</a
         >
-        <a class="btn btn--primary" href="app/?lang=pl">Otwórz mapę</a>
+        <a class="btn btn--primary" href="../app/?lang=en">Open the map</a>
       </div>
     </header>
 
-    <main id="tresc">
+    <main id="content">
       <section class="hero" aria-labelledby="hero-title">
         <svg
           class="hero__contours"
@@ -1388,46 +1403,45 @@
           <div class="hero__text">
             <p class="eyebrow">
               <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>
-              Bezpłatna, bez konta i bez reklam
+              Free, no account, no ads
             </p>
-            <h1 id="hero-title">Darmowa mapa, która działa <span>w&nbsp;przeglądarce</span></h1>
+            <h1 id="hero-title">A free map that works <span>in&nbsp;your browser</span></h1>
             <p class="hero__lead">
-              Szukaj miejsc, planuj trasy, sprawdzaj odjazdy, szlaki i&nbsp;najbliższy defibrylator.
-              Open Maps otworzysz na telefonie i&nbsp;komputerze, a&nbsp;na ekran początkowy dodasz
-              ją jak zwykłą aplikację.
+              Find places, plan routes, check departures, hiking trails and the nearest
+              defibrillator. Use Open Maps on your phone or computer, and add it to your home screen
+              like any other app.
             </p>
             <div class="hero__actions">
-              <a class="btn btn--primary btn--large" href="app/?lang=pl">
+              <a class="btn btn--primary btn--large" href="../app/?lang=en">
                 <svg class="icon" aria-hidden="true"><use href="#i-map" /></svg>
-                Otwórz mapę
+                Open the map
               </a>
               <button class="btn btn--tonal btn--large" type="button" id="install-button" hidden>
                 <svg class="icon" aria-hidden="true"><use href="#i-install_desktop" /></svg>
-                Zainstaluj
+                Install
               </button>
-              <a class="btn btn--tonal btn--large" href="#instalacja" id="install-link">
+              <a class="btn btn--tonal btn--large" href="#install" id="install-link">
                 <svg class="icon" aria-hidden="true"><use href="#i-mobile_arrow_down" /></svg>
-                Jak zainstalować
+                How to install
               </a>
             </div>
             <p class="hero__note">
-              Nie musisz niczego pobierać ze sklepu. Działa na Androidzie, iPhonie
-              i&nbsp;komputerze.
+              Nothing to download from an app store. Works on Android, iPhone and computers, with
+              maps, search and directions all over the world.
             </p>
-            <ul class="pills" aria-label="Najważniejsze cechy">
+            <ul class="pills" aria-label="Key features">
               <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-money_off" /></svg>Za darmo
+                <svg class="icon" aria-hidden="true"><use href="#i-money_off" /></svg>Free
               </li>
               <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-person_off" /></svg>Bez konta
+                <svg class="icon" aria-hidden="true"><use href="#i-person_off" /></svg>No account
               </li>
               <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-block" /></svg>Bez reklam i
-                śledzenia
+                <svg class="icon" aria-hidden="true"><use href="#i-block" /></svg>No ads or tracking
               </li>
               <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-mobile_arrow_down" /></svg
-                >Instalacja bez sklepu
+                <svg class="icon" aria-hidden="true"><use href="#i-mobile_arrow_down" /></svg>No app
+                store needed
               </li>
             </ul>
           </div>
@@ -1448,7 +1462,7 @@
                 </div>
                 <img
                   src="shots/map.webp"
-                  alt="Open Maps na telefonie: Rynek w Krakowie z budynkami 3D, polem wyszukiwania i skrótami do kategorii"
+                  alt="Open Maps on a phone: Kraków's Main Square with 3D buildings, the search box and category shortcuts"
                   width="390"
                   height="844"
                   fetchpriority="high"
@@ -1459,13 +1473,18 @@
         </div>
       </section>
 
-      <section class="section" id="funkcje" aria-labelledby="features-title">
+      <section class="section" id="features" aria-labelledby="features-title">
         <div class="wrap">
           <div class="section-head reveal">
-            <h2 id="features-title">Wszystko, czego potrzebujesz od mapy</h2>
+            <h2 id="features-title">Everything you need from a map</h2>
             <p>
-              Od codziennych spraw w mieście, przez pomoc w nagłej sytuacji, po wyjście w góry. Bez
-              logowania, bez płatnych funkcji i bez wyskakujących reklam.
+              From everyday errands around town to help in an emergency and a day in the mountains.
+              No sign-in, no paid features and no pop-up ads.
+            </p>
+            <p class="coverage">
+              The map, place search and directions work worldwide. Open Maps is made in Poland, and
+              some of its data comes from Polish public services, so a few features cover Poland
+              only. They are marked <span class="tag">Poland</span> below.
             </p>
           </div>
 
@@ -1479,34 +1498,34 @@
                 <p class="badge">
                   <span
                     ><svg class="icon" aria-hidden="true"><use href="#i-search" /></svg></span
-                  >Wyszukiwanie
+                  >Search
                 </p>
-                <h2 id="f-search">Znajdź to, czego szukasz</h2>
+                <h2 id="f-search">Find what you're looking for</h2>
                 <p class="feature__lead">
-                  Jedno pole na wszystko: nazwa miejsca, adres, numer działki, współrzędne albo Plus
-                  Code. Możesz też po prostu powiedzieć, czego szukasz.
+                  One box for everything: a place name, an address, coordinates or a Plus Code. Or
+                  just say what you're looking for.
                 </p>
                 <ul class="checks">
                   <li>
                     <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Podpowiedzi już po kilku literach
+                    >Suggestions after just a few letters
                   </li>
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-mic" /></svg>Wyszukiwanie
-                    głosowe: stuknij mikrofon w polu wyszukiwania (w przeglądarkach z rozpoznawaniem
-                    mowy)
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Restauracje, sklepy, apteki i stacje paliw w pobliżu
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Karta
-                    miejsca z godzinami otwarcia, telefonem, stroną i pogodą
+                    <svg class="icon" aria-hidden="true"><use href="#i-mic" /></svg>Voice search:
+                    tap the microphone in the search box (in browsers with speech recognition)
                   </li>
                   <li>
                     <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Przytrzymaj palec na mapie, aby zobaczyć adres i działkę w tym miejscu
+                    >Restaurants, shops, pharmacies and petrol stations nearby
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Place
+                    cards with opening hours, phone number, website and weather
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Touch
+                    and hold the map to see the address there, and the land parcel
+                    <span class="tag">Poland</span>
                   </li>
                 </ul>
               </div>
@@ -1518,7 +1537,7 @@
                     </div>
                     <img
                       src="shots/search.webp"
-                      alt="Kawiarnie w pobliżu: punkty na mapie i lista miejsc"
+                      alt="Cafés nearby: pins on the map and a list of places"
                       width="390"
                       height="844"
                       loading="lazy"
@@ -1538,38 +1557,41 @@
                 <p class="badge">
                   <span
                     ><svg class="icon" aria-hidden="true"><use href="#i-ecg_heart" /></svg></span
-                  >Bezpieczeństwo
+                  >Safety
                 </p>
-                <h2 id="f-safety">Pomoc w pobliżu, gdy liczy się czas</h2>
+                <h2 id="f-safety">Help nearby when every minute counts</h2>
                 <p class="feature__lead">
-                  Sprawdź, gdzie jest najbliższy schron, miejsce ukrycia albo defibrylator i jak do
-                  niego dojść. Gdy trzeba wezwać pomoc, wyślesz swoją lokalizację SMS-em albo podasz
-                  dyspozytorowi 112 współrzędne, adres i Plus Code. Udostępnianie lokalizacji działa
-                  także bez internetu.
+                  See where the nearest defibrillator or shelter is and how to walk there. When you
+                  need help, send your location by text message, or read the coordinates, address
+                  and Plus Code out to the emergency operator. Location sharing works offline too.
                 </p>
                 <ul class="checks">
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Schrony
-                    i miejsca ukrycia z rejestru Państwowej Straży Pożarnej
-                  </li>
-                  <li>
                     <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Defibrylatory AED i droga do najbliższego
+                    >Shelters from the State Fire Service register
+                    <span class="tag">Poland</span>
                   </li>
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Zasięg
-                    pieszo: dokąd dojdziesz w 1, 3 i 5 minut
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>AED
+                    defibrillators and the way to the nearest one <span class="tag">Poland</span>
                   </li>
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Twoja
-                    lokalizacja SMS-em i przycisk „Zadzwoń 112”
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Walking
+                    range: how far you can get in 1, 3 and 5 minutes
                   </li>
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Ostrzeżenia pogodowe IMGW dla powiatu i radar opadów
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Your
+                    location by text message and a “Call 112” button
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Rain
+                    radar, and IMGW weather warnings for your county
+                    <span class="tag">Poland</span>
                   </li>
                 </ul>
-                <p class="note">W nagłym wypadku zawsze najpierw dzwoń pod numer alarmowy 112.</p>
+                <p class="note">
+                  In an emergency, always call the emergency number first: 112 anywhere in the EU.
+                </p>
               </div>
               <div class="feature__art">
                 <figure class="phone">
@@ -1579,7 +1601,7 @@
                     </div>
                     <img
                       src="shots/safety.webp"
-                      alt="Defibrylatory i schrony na mapie, karta defibrylatora z przyciskiem „Zadzwoń 112”"
+                      alt="Defibrillators and shelters on the map, and a defibrillator card with a “Call 112” button"
                       width="390"
                       height="844"
                       loading="lazy"
@@ -1599,29 +1621,29 @@
                 <p class="badge">
                   <span
                     ><svg class="icon" aria-hidden="true"><use href="#i-directions" /></svg></span
-                  >Trasy i nawigacja
+                  >Directions
                 </p>
-                <h2 id="f-routes">Trasa samochodem, rowerem lub pieszo</h2>
+                <h2 id="f-routes">Directions by car, bike or on foot</h2>
                 <p class="feature__lead">
-                  Porównaj warianty, sprawdź czas i odległość, a potem stuknij „Prowadź”. Aplikacja
-                  poprowadzi Cię zakręt po zakręcie i przeczyta wskazówki na głos.
+                  Compare the options, check the time and distance, then tap “Start”. The app guides
+                  you turn by turn and reads the directions aloud.
                 </p>
                 <ul class="checks">
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Trasa z
-                    Twojej lokalizacji jednym stuknięciem
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
+                    >Directions from where you are in one tap
                   </li>
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Opcje
-                    trasy, np. bez autostrad
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Route
+                    options, such as avoiding motorways
                   </li>
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Profil
-                    wysokości dla roweru i spaceru
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
+                    >Elevation profile for cycling and walking
                   </li>
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Zapis
-                    trasy do pliku GPX
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Save
+                    the route as a GPX file
                   </li>
                 </ul>
               </div>
@@ -1633,7 +1655,7 @@
                     </div>
                     <img
                       src="shots/route.webp"
-                      alt="Trasa rowerowa na Kopiec Kościuszki z wariantem, czasem i odległością"
+                      alt="A cycling route to Kościuszko Mound with an alternative, the time and the distance"
                       width="390"
                       height="844"
                       loading="lazy"
@@ -1648,7 +1670,7 @@
                     </div>
                     <img
                       src="shots/guidance.webp"
-                      alt="Tryb „Prowadź”: wskazówka „Skręć w lewo” i czas do celu"
+                      alt="Turn-by-turn guidance: a “Turn left” instruction and the time to arrival"
                       width="390"
                       height="844"
                       loading="lazy"
@@ -1669,29 +1691,30 @@
                   <span
                     ><svg class="icon" aria-hidden="true">
                       <use href="#i-directions_bus" /></svg></span
-                  >Komunikacja
+                  >Public transport
                 </p>
-                <h2 id="f-transit">Kiedy odjeżdża najbliższy autobus?</h2>
+                <h2 id="f-transit">When does the next bus leave?</h2>
                 <p class="feature__lead">
-                  Stuknij przystanek na mapie, a zobaczysz najbliższe odjazdy autobusów, tramwajów i
-                  pociągów. Wybierz kurs, żeby zobaczyć jego przebieg i kolejne przystanki.
+                  Tap a stop on the map to see the next buses, trams and trains. Pick a trip to see
+                  its route and the stops ahead. Departures appear wherever operators publish their
+                  timetables as open data.
                 </p>
                 <ul class="checks">
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Odjazdy
-                    z przystanków i dworców
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Wybór
-                    linii zatrzymujących się na przystanku
-                  </li>
-                  <li>
                     <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Przebieg kursu na mapie
+                    >Departures from stops and stations
                   </li>
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Warstwa
-                    komunikacji z przystankami
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Filter
+                    by the lines that call at the stop
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>The
+                    trip's route on the map
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>A
+                    public transport layer with stops
                   </li>
                 </ul>
               </div>
@@ -1703,7 +1726,7 @@
                     </div>
                     <img
                       src="shots/transit.webp"
-                      alt="Przystanek tramwajowy z liniami i najbliższymi odjazdami"
+                      alt="A tram stop with its lines and the next departures"
                       width="390"
                       height="844"
                       loading="lazy"
@@ -1723,36 +1746,37 @@
                 <p class="badge">
                   <span
                     ><svg class="icon" aria-hidden="true"><use href="#i-landscape" /></svg></span
-                  >Góry
+                  >Mountains
                 </p>
-                <h2 id="f-mountains">W góry z mapą szlaków</h2>
+                <h2 id="f-mountains">Into the mountains with a trail map</h2>
                 <p class="feature__lead">
-                  Włącz szlaki i teren 3D, a przed wyjściem sprawdź pogodę na szczycie i zagrożenie
-                  lawinowe.
+                  Turn on hiking trails and 3D terrain, and before you set off, check the weather on
+                  the summit and the avalanche danger.
                 </p>
                 <ul class="checks">
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Szlaki
-                    piesze z kartą szlaku: przebieg, długość i znaczek
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Hiking
+                    trails with a trail card: route, length and waymark
                   </li>
                   <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Teren
-                    3D, warstwice i cieniowanie terenu
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>3D
+                    terrain, contour lines and hillshading
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Weather
+                    for mountain peaks
                   </li>
                   <li>
                     <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Zamknięcia szlaków w Tatrzańskim Parku Narodowym
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Zagrożenie lawinowe i pogoda dla szczytów
+                    >Avalanche danger and trail closures in the Tatra National Park
+                    <span class="tag">Poland</span>
                   </li>
                 </ul>
                 <a
                   class="feature__try"
-                  href="app/?map=12.5/49.2320/19.9818/20/60&amp;b=terrain&amp;l=hiking&amp;lang=pl"
+                  href="../app/?map=12.5/49.2320/19.9818/20/60&amp;b=terrain&amp;l=hiking&amp;lang=en"
                 >
-                  Zobacz Tatry w 3D<svg class="icon" aria-hidden="true">
+                  See the Tatras in 3D<svg class="icon" aria-hidden="true">
                     <use href="#i-chevron_right" />
                   </svg>
                 </a>
@@ -1765,7 +1789,7 @@
                     </div>
                     <img
                       src="shots/mountains.webp"
-                      alt="Tatry w 3D ze szlakami i kartą Kasprowego Wierchu z pogodą"
+                      alt="The Tatras in 3D with hiking trails and the Kasprowy Wierch card with the weather"
                       width="390"
                       height="844"
                       loading="lazy"
@@ -1785,33 +1809,34 @@
                 <p class="badge">
                   <span
                     ><svg class="icon" aria-hidden="true"><use href="#i-layers" /></svg></span
-                  >Mapy i warstwy
+                  >Maps and layers
                 </p>
-                <h2 id="f-layers">Mapa, jakiej potrzebujesz</h2>
+                <h2 id="f-layers">The map you need</h2>
                 <p class="feature__lead">
-                  Wybierz typ mapy: domyślną, satelitarną, terenową albo topograficzną. Dodaj
-                  warstwy i otwórz własne pliki z trasami.
+                  Choose a map type: default, terrain, topographic or satellite (aerial photos of
+                  Poland). Add layers and open your own route files.
                 </p>
                 <ul class="checks">
                   <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Cycle
+                    routes, hiking trails and public transport
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>GPX,
+                    KML and GeoJSON files opened on the map
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>“My
+                    layers”: add a map from your own WMS or WMTS address
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Land
+                    parcels, buildings, boundaries and property prices
+                    <span class="tag">Poland</span>
+                  </li>
+                  <li>
                     <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg
-                    >Działki, budynki, granice i ceny transakcyjne
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Trasy
-                    rowerowe, szlaki i komunikacja
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Pliki
-                    GPX, KML i GeoJSON otwierane na mapie
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>„Moje
-                    warstwy”: mapy z katalogu Geoportalu albo z własnego adresu
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Pomiar
-                    odległości i powierzchni, budynki 3D, tryb ciemny
+                    >Distance and area measurement, 3D buildings, dark mode
                   </li>
                 </ul>
               </div>
@@ -1823,7 +1848,7 @@
                     </div>
                     <img
                       src="shots/layers.webp"
-                      alt="Panel warstw: typy mapy i szczegóły mapy do włączenia"
+                      alt="The layers panel: map types and map details to turn on"
                       width="390"
                       height="844"
                       loading="lazy"
@@ -1837,64 +1862,62 @@
         </div>
       </section>
 
-      <section class="section" id="prywatnosc" aria-labelledby="privacy-title">
+      <section class="section" id="privacy" aria-labelledby="privacy-title">
         <div class="wrap">
           <div class="privacy reveal">
             <div class="section-head">
               <p class="badge">
                 <span
                   ><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span
-                >Prywatność
+                >Privacy
               </p>
-              <h2 id="privacy-title">Twoje dane zostają u Ciebie</h2>
+              <h2 id="privacy-title">Your data stays with you</h2>
               <p>
-                Open Maps nie wymaga konta i nie zbiera statystyk. Nie wie, kim jesteś, i nie musi
-                tego wiedzieć.
+                Open Maps needs no account and collects no statistics. It doesn't know who you are,
+                and it doesn't need to.
               </p>
             </div>
             <ul class="privacy-grid">
               <li>
                 <svg class="icon" aria-hidden="true"><use href="#i-person_off" /></svg>
-                <h3>Bez konta</h3>
-                <p>Nie podajesz adresu e-mail, numeru telefonu ani hasła.</p>
+                <h3>No account</h3>
+                <p>No email address, phone number or password to hand over.</p>
               </li>
               <li>
                 <svg class="icon" aria-hidden="true"><use href="#i-visibility_off" /></svg>
-                <h3>Bez reklam i śledzenia</h3>
-                <p>Na stronie i w aplikacji nie ma reklam, liczników odwiedzin ani profilowania.</p>
+                <h3>No ads or tracking</h3>
+                <p>No ads, visitor counters or profiling, on this page or in the app.</p>
               </li>
               <li>
                 <svg class="icon" aria-hidden="true"><use href="#i-house" /></svg>
-                <h3>Dane na Twoim urządzeniu</h3>
-                <p>
-                  Zapisane miejsca, historia wyszukiwania i ustawienia są tylko w Twojej
-                  przeglądarce.
-                </p>
+                <h3>Data on your device</h3>
+                <p>Saved places, search history and settings stay in your browser.</p>
               </li>
               <li>
                 <svg class="icon" aria-hidden="true"><use href="#i-share_location" /></svg>
-                <h3>Lokalizacja tylko, gdy jej potrzebujesz</h3>
+                <h3>Location only when needed</h3>
                 <p>
-                  Usługa danych dostaje położenie punktu wyłącznie przy funkcji, która go wymaga,
-                  np. przy trasie albo pogodzie.
+                  A data service gets a location only for a feature that needs it, such as
+                  directions or the weather.
                 </p>
               </li>
             </ul>
             <p class="privacy__more">
-              Dokładnie opisujemy, która usługa dostaje jakie dane:
-              <a href="app/?lang=pl#o-aplikacji">O aplikacji → Prywatność</a>.
+              We spell out which service receives what:
+              <a href="../app/?lang=en#o-aplikacji">About → Privacy</a>.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="section" id="instalacja" aria-labelledby="install-title">
+      <section class="section" id="install" aria-labelledby="install-title">
         <div class="wrap">
           <div class="section-head reveal">
-            <h2 id="install-title">Jak zainstalować</h2>
+            <h2 id="install-title">How to install</h2>
             <p>
-              Instalować nie trzeba: mapa działa od razu w przeglądarce. Po dodaniu do ekranu
-              początkowego dostajesz własną ikonę, pełny ekran i szybszy start, także bez internetu.
+              You don't have to install anything: the map works straight away in your browser. Add
+              it to your home screen to get its own icon, full screen and a faster start, even
+              offline.
             </p>
           </div>
           <div class="install-grid">
@@ -1903,46 +1926,46 @@
               data-platform="android"
               aria-labelledby="inst-android"
             >
-              <span class="install-card__here">Twoje urządzenie</span>
+              <span class="install-card__here">Your device</span>
               <svg class="icon" aria-hidden="true"><use href="#i-android" /></svg>
               <h3 id="inst-android">Android</h3>
               <p class="install-card__browser">Chrome, Edge, Samsung Internet</p>
               <ol class="steps">
                 <li>
-                  <span>Otwórz <a href="app/?lang=pl">mapę</a> w przeglądarce.</span>
+                  <span>Open the <a href="../app/?lang=en">map</a> in your browser.</span>
                 </li>
                 <li>
                   <span
-                    >Stuknij menu
-                    <svg class="icon" aria-label="z trzema kropkami" role="img">
+                    >Tap the
+                    <svg class="icon" aria-label="three-dot" role="img">
                       <use href="#i-more_vert" />
                     </svg>
-                    w prawym górnym rogu.</span
+                    menu in the top-right corner.</span
                   >
                 </li>
                 <li>
-                  <span>Wybierz „Zainstaluj aplikację” albo „Dodaj do ekranu głównego”.</span>
+                  <span>Choose “Install app” or “Add to Home screen”.</span>
                 </li>
               </ol>
             </article>
             <article class="install-card reveal" data-platform="ios" aria-labelledby="inst-ios">
-              <span class="install-card__here">Twoje urządzenie</span>
+              <span class="install-card__here">Your device</span>
               <svg class="icon" aria-hidden="true"><use href="#i-mobile" /></svg>
-              <h3 id="inst-ios">iPhone i iPad</h3>
-              <p class="install-card__browser">Safari (od iOS 16.4 także inne przeglądarki)</p>
+              <h3 id="inst-ios">iPhone and iPad</h3>
+              <p class="install-card__browser">Safari (other browsers too since iOS 16.4)</p>
               <ol class="steps">
                 <li>
-                  <span>Otwórz <a href="app/?lang=pl">mapę</a> w Safari.</span>
+                  <span>Open the <a href="../app/?lang=en">map</a> in Safari.</span>
                 </li>
                 <li>
                   <span
-                    >Stuknij „Udostępnij”
-                    <svg class="icon" aria-label="(kwadrat ze strzałką w górę)" role="img">
+                    >Tap “Share”
+                    <svg class="icon" aria-label="(a square with an arrow pointing up)" role="img">
                       <use href="#i-ios_share" /></svg
                     >.</span
                   >
                 </li>
-                <li><span>Wybierz „Do ekranu początkowego” i potwierdź „Dodaj”.</span></li>
+                <li><span>Choose “Add to Home Screen” and confirm with “Add”.</span></li>
               </ol>
             </article>
             <article
@@ -1950,129 +1973,134 @@
               data-platform="desktop"
               aria-labelledby="inst-desktop"
             >
-              <span class="install-card__here">Twoje urządzenie</span>
+              <span class="install-card__here">Your device</span>
               <svg class="icon" aria-hidden="true"><use href="#i-computer" /></svg>
-              <h3 id="inst-desktop">Komputer</h3>
-              <p class="install-card__browser">Chrome, Edge, Safari na Macu</p>
+              <h3 id="inst-desktop">Computer</h3>
+              <p class="install-card__browser">Chrome, Edge, Safari on a Mac</p>
               <ol class="steps">
                 <li>
-                  <span>Otwórz <a href="app/?lang=pl">mapę</a> w przeglądarce.</span>
+                  <span>Open the <a href="../app/?lang=en">map</a> in your browser.</span>
                 </li>
                 <li>
                   <span
-                    >Kliknij ikonę instalacji
-                    <svg class="icon" aria-label="(monitor ze strzałką)" role="img">
+                    >Click the install icon
+                    <svg class="icon" aria-label="(a monitor with an arrow)" role="img">
                       <use href="#i-install_desktop" />
                     </svg>
-                    na końcu paska adresu.</span
+                    at the end of the address bar.</span
                   >
                 </li>
-                <li><span>Potwierdź „Zainstaluj”.</span></li>
+                <li><span>Confirm with “Install”.</span></li>
               </ol>
               <p class="install-card__extra">
-                Safari na Macu: menu Plik → „Dodaj do Docka”. Firefox nie instaluje stron, ale mapa
-                działa w nim normalnie.
+                Safari on a Mac: File menu → “Add to Dock”. Firefox doesn't install websites, but
+                the map works in it as usual.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="pytania" aria-labelledby="faq-title">
+      <section class="section" id="faq" aria-labelledby="faq-title">
         <div class="wrap">
           <div class="section-head reveal">
-            <h2 id="faq-title">Pytania i odpowiedzi</h2>
+            <h2 id="faq-title">Questions and answers</h2>
           </div>
           <div class="faq reveal">
             <details>
               <summary>
-                Czy Open Maps jest naprawdę darmowa?<svg class="icon" aria-hidden="true">
+                Is Open Maps really free?<svg class="icon" aria-hidden="true">
                   <use href="#i-keyboard_arrow_down" />
                 </svg>
               </summary>
               <p>
-                Tak. Nie ma opłat, abonamentu, płatnych funkcji ani reklam. Nie trzeba też zakładać
-                konta ani podawać adresu e-mail.
+                Yes. There are no fees, subscriptions, paid features or ads. You don't need an
+                account or an email address either.
               </p>
             </details>
             <details>
               <summary>
-                Skąd pochodzą dane?<svg class="icon" aria-hidden="true">
+                Where does the data come from?<svg class="icon" aria-hidden="true">
                   <use href="#i-keyboard_arrow_down" />
                 </svg>
               </summary>
               <p>
-                Mapa, wyszukiwanie miejsc i trasy korzystają z OpenStreetMap, otwartej mapy
-                tworzonej przez społeczność. Zdjęcia lotnicze, działki, budynki i adresy pochodzą z
-                publicznych usług Głównego Urzędu Geodezji i Kartografii, schrony z rejestru
-                Państwowej Straży Pożarnej, ostrzeżenia z IMGW, a prognoza pogody z Open-Meteo.
+                The map, place search and directions use OpenStreetMap, the open map made by its
+                community. In Poland, aerial photos, land parcels, buildings and addresses come from
+                the public services of the Head Office of Geodesy and Cartography (GUGiK), shelters
+                from the State Fire Service register and weather warnings from IMGW, the Polish
+                weather service. Weather forecasts come from Open-Meteo.
               </p>
               <p>
-                Pełna lista z licencjami: <a href="app/?lang=pl#zrodla-danych">Źródła danych</a>.
-              </p>
-            </details>
-            <details>
-              <summary>
-                Czy działa bez internetu?<svg class="icon" aria-hidden="true">
-                  <use href="#i-keyboard_arrow_down" />
-                </svg>
-              </summary>
-              <p>
-                Częściowo. Po pierwszej wizycie aplikacja uruchamia się bez internetu i działają w
-                niej zapisane miejsca, historia wyszukiwania oraz udostępnianie lokalizacji
-                (współrzędne i Plus Code). Sama mapa, wyszukiwanie i trasy potrzebują połączenia.
-                Map do pobrania na telefon na razie nie ma.
+                The full list with licences:
+                <a href="../app/?lang=en#zrodla-danych">Data sources</a>.
               </p>
             </details>
             <details>
               <summary>
-                Czy działa poza Polską?<svg class="icon" aria-hidden="true">
+                Does it work offline?<svg class="icon" aria-hidden="true">
                   <use href="#i-keyboard_arrow_down" />
                 </svg>
               </summary>
               <p>
-                Mapa, wyszukiwanie miejsc i trasy działają na całym świecie. Część informacji
-                dotyczy tylko Polski: działki, ceny transakcyjne, schrony, ostrzeżenia IMGW i
-                zamknięcia szlaków w Tatrach. Odjazdy komunikacji są tam, gdzie przewoźnicy
-                udostępniają swoje rozkłady.
+                Partly. After your first visit, the app starts without an internet connection, and
+                your saved places, search history and location sharing (coordinates and Plus Code)
+                work offline. The map itself, search and directions need a connection. Street maps
+                can't be downloaded to your phone yet.
               </p>
             </details>
             <details>
               <summary>
-                Czy aplikacja zna moją lokalizację?<svg class="icon" aria-hidden="true">
+                Does it work outside Poland?<svg class="icon" aria-hidden="true">
                   <use href="#i-keyboard_arrow_down" />
                 </svg>
               </summary>
               <p>
-                Tylko wtedy, gdy na to pozwolisz w przeglądarce. Twoja pozycja jest używana na
-                urządzeniu, na przykład do pokazania niebieskiej kropki. Do usługi tras trafia
-                dopiero wtedy, gdy wyznaczasz trasę z „Twojej lokalizacji”, a do usługi adresów, gdy
-                chcesz ją udostępnić z adresem.
+                Yes. The map, place search and directions work all over the world, and the app is
+                available in English. Some information covers Poland only: land parcels, property
+                prices, aerial photos, shelters, defibrillators, IMGW weather warnings, avalanche
+                bulletins and trail closures in the Tatras. Public transport departures are shown
+                wherever operators publish their timetables.
               </p>
             </details>
             <details>
               <summary>
-                Na jakich urządzeniach działa?<svg class="icon" aria-hidden="true">
+                Does the app know where I am?<svg class="icon" aria-hidden="true">
                   <use href="#i-keyboard_arrow_down" />
                 </svg>
               </summary>
               <p>
-                W aktualnych przeglądarkach: Chrome, Edge, Firefox i Safari, na Androidzie, iPhonie,
-                iPadzie i komputerze. Mapa potrzebuje grafiki WebGL, którą mają praktycznie
-                wszystkie współczesne urządzenia.
+                Only if you allow it in your browser. Your position is used on your device, for
+                example to show the blue dot. It goes to the routing service only when you plan a
+                route from “Your location”, and to the address service when you share it with an
+                address.
               </p>
             </details>
             <details>
               <summary>
-                Zauważyłem błąd na mapie. Co mogę zrobić?<svg class="icon" aria-hidden="true">
+                Which devices does it work on?<svg class="icon" aria-hidden="true">
                   <use href="#i-keyboard_arrow_down" />
                 </svg>
               </summary>
               <p>
-                Mapa pochodzi z OpenStreetMap, którą każdy może poprawić:
+                Current versions of Chrome, Edge, Firefox and Safari, on Android, iPhone, iPad and
+                computers. The map needs WebGL graphics, which virtually every modern device has.
+              </p>
+            </details>
+            <details>
+              <summary>
+                I've spotted a mistake on the map. What can I do?<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#i-keyboard_arrow_down" />
+                </svg>
+              </summary>
+              <p>
+                The map comes from OpenStreetMap, which anyone can improve:
                 <a href="https://www.openstreetmap.org/fixthemap" rel="noopener"
-                  >popraw mapę w OpenStreetMap</a
-                >. Błąd w aplikacji zgłoś na
+                  >fix the map on OpenStreetMap</a
+                >. To report a bug in the app, write to
                 <a href="mailto:krz.noga@gmail.com">krz.noga@gmail.com</a>.
               </p>
             </details>
@@ -2083,12 +2111,12 @@
       <section class="section" aria-labelledby="cta-title">
         <div class="wrap">
           <div class="cta reveal">
-            <img src="app/favicon.svg" alt="" width="72" height="72" loading="lazy" />
-            <h2 id="cta-title">Sprawdź, jak działa</h2>
-            <p>Otwórz mapę w przeglądarce. Bez rejestracji, bez pobierania, od razu.</p>
-            <a class="btn btn--primary btn--large" href="app/?lang=pl">
+            <img src="../app/favicon.svg" alt="" width="72" height="72" loading="lazy" />
+            <h2 id="cta-title">See it for yourself</h2>
+            <p>Open the map in your browser. No sign-up, no download, ready right away.</p>
+            <a class="btn btn--primary btn--large" href="../app/?lang=en">
               <svg class="icon" aria-hidden="true"><use href="#i-map" /></svg>
-              Otwórz mapę
+              Open the map
             </a>
           </div>
         </div>
@@ -2097,30 +2125,30 @@
 
     <footer class="footer">
       <div class="wrap footer__grid">
-        <a class="brand" href="#tresc">
-          <img src="app/favicon.svg" alt="" width="32" height="32" loading="lazy" />
+        <a class="brand" href="#content">
+          <img src="../app/favicon.svg" alt="" width="32" height="32" loading="lazy" />
           Open Maps
         </a>
-        <nav aria-label="Stopka">
+        <nav aria-label="Footer">
           <ul class="footer__links">
-            <li><a href="app/?lang=pl">Otwórz mapę</a></li>
-            <li><a href="app/?lang=pl#zrodla-danych">Źródła danych</a></li>
-            <li><a href="app/?lang=pl#o-aplikacji">O aplikacji</a></li>
+            <li><a href="../app/?lang=en">Open the map</a></li>
+            <li><a href="../app/?lang=en#zrodla-danych">Data sources</a></li>
+            <li><a href="../app/?lang=en#o-aplikacji">About</a></li>
             <li>
               <a href="https://www.openstreetmap.org/fixthemap" rel="noopener"
-                >Popraw mapę w OpenStreetMap</a
+                >Fix the map on OpenStreetMap</a
               >
             </li>
-            <li><a href="mailto:krz.noga@gmail.com">Kontakt: krz.noga@gmail.com</a></li>
-            <li><a href="en/" hreflang="en" lang="en">English</a></li>
+            <li><a href="mailto:krz.noga@gmail.com">Contact: krz.noga@gmail.com</a></li>
+            <li><a href="../" hreflang="pl" lang="pl">Polski</a></li>
           </ul>
         </nav>
         <p class="footer__legal">
-          Zrzuty ekranu zawierają dane © współtwórcy
-          <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> (ODbL),
-          podkład OpenFreeMap, ortofotomapę © GUGiK i dane innych dostawców wymienionych w
-          <a href="app/?lang=pl#zrodla-danych">Źródłach danych</a>. Ta strona nie używa plików
-          cookie, analityki ani zewnętrznych skryptów.
+          The screenshots contain data ©
+          <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>
+          contributors (ODbL), the OpenFreeMap basemap, orthophotos © GUGiK and data from the other
+          providers listed in <a href="../app/?lang=en#zrodla-danych">Data sources</a>. This page
+          uses no cookies, analytics or third-party scripts.
         </p>
       </div>
     </footer>
@@ -2181,36 +2209,6 @@
           });
         }
 
-        // English page offered to browsers that prefer English (or no supported language)
-        // over Polish, like the app's own language detection; never a redirect.
-        var BANNER_KEY = 'open-maps:landing-language-banner';
-        var banner = document.getElementById('lang-banner');
-        var prefersEnglish = (function () {
-          var tags = navigator.languages && navigator.languages.length ? navigator.languages : [];
-          if (!tags.length && navigator.language) tags = [navigator.language];
-          for (var i = 0; i < tags.length; i += 1) {
-            var primary = String(tags[i]).trim().toLowerCase().split(/[-_]/)[0];
-            if (primary === 'pl') return false;
-            if (primary === 'en') return true;
-          }
-          return true;
-        })();
-        var dismissed = false;
-        try {
-          dismissed = localStorage.getItem(BANNER_KEY) === 'dismissed';
-        } catch (error) {
-          // Storage blocked: the banner can come back on the next visit.
-        }
-        if (prefersEnglish && !dismissed) banner.hidden = false;
-        document.getElementById('lang-banner-close').addEventListener('click', function () {
-          banner.hidden = true;
-          try {
-            localStorage.setItem(BANNER_KEY, 'dismissed');
-          } catch (error) {
-            // Storage blocked: hidden for this visit only.
-          }
-        });
-
         // Highlight the install steps for this device.
         var ua = navigator.userAgent;
         var isIos =
@@ -2219,7 +2217,7 @@
         var card = document.querySelector('[data-platform="' + platform + '"]');
         if (card) card.classList.add('is-current');
 
-        // Chromium: a real „Zainstaluj” button when the browser offers installation.
+        // Chromium: a real "Install" button when the browser offers installation.
         var installButton = document.getElementById('install-button');
         var installLink = document.getElementById('install-link');
         var deferred = null;
