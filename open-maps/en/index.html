@@ -1237,6 +1237,11 @@
           d="M378-329q-108.16 0-183.08-75Q120-479 120-585t75-181q75-75 181.5-75t181 75Q632-691 632-584.85 632-542 618-502q-14 40-42 75l242 240q9 8.56 9 21.78T818-143q-9 9-22.22 9-13.22 0-21.78-9L533-384q-30 26-69.96 40.5Q423.08-329 378-329Zm-1-60q81.25 0 138.13-57.5Q572-504 572-585t-56.87-138.5Q458.25-781 377-781q-82.08 0-139.54 57.5Q180-666 180-585t57.46 138.5Q294.92-389 377-389Z"
         />
       </symbol>
+      <symbol id="i-sparkle" viewBox="0 -960 960 960">
+        <path
+          d="m323-245 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm157-24L294-157q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-544L662-401l49 212q2 10-1.5 18T699-158q-7 5-16 5.5t-17-4.5L480-269Zm290-458-65 38q-5 2-9-.5t-2-7.5l17-72-57-48q-4-3-2.5-7.5t6.5-5.5l76-6 29-68q2-5 7-5t7 5l29 68 76 6q5 1 6.5 5.5T886-817l-57 48 17 72q2 5-2 7.5t-9 .5l-65-38ZM480-485Z"
+        />
+      </symbol>
       <symbol id="i-mic" viewBox="0 -960 960 960">
         <path
           d="M408-453.92q-29-30.91-29-75.08v-251q0-41.67 29.44-70.83Q437.88-880 479.94-880t71.56 29.17Q581-821.67 581-780v251q0 44.17-29 75.08Q523-423 480-423t-72-30.92ZM450-150v-106q-96-11-166.5-77.5T202-498q-2-12.85 6.59-21.93 8.6-9.07 21.5-9.07 12.91 0 21.41 9t10.5 22q12 81 74.71 132.5Q399.42-314 479.65-314q81.35 0 143.85-51.5T698-498q2-13 10.68-22 8.67-9 21.5-9 12.82 0 21.32 9.07 8.5 9.08 6.5 21.93-11 97-81 164t-167 78v106q0 12.75-8.68 21.37-8.67 8.63-21.5 8.63-12.82 0-21.32-8.63-8.5-8.62-8.5-21.37Z"
@@ -1414,8 +1419,8 @@
             <h1 id="hero-title">A free map that works <span>in&nbsp;your browser</span></h1>
             <p class="hero__lead">
               Find places, plan routes, check departures, hiking trails and the nearest
-              defibrillator. Use Open Maps on your phone or computer, and add it to your home screen
-              like any other app.
+              defibrillator, and ask the AI assistant about the area. Use Open Maps on your phone or
+              computer, and add it to your home screen like any other app.
             </p>
             <div class="hero__actions">
               <a class="btn btn--primary btn--large" href="../app/?lang=en">
@@ -1908,6 +1913,64 @@
                 </figure>
               </div>
             </article>
+            <article
+              class="feature reveal"
+              style="--tint: var(--tint-teal)"
+              aria-labelledby="f-assistant"
+            >
+              <div class="feature__text">
+                <p class="badge">
+                  <span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-sparkle" /></svg></span
+                  >AI assistant
+                </p>
+                <h2 id="f-assistant">Ask the map in your own words</h2>
+                <p class="feature__lead">
+                  The AI assistant works on the map: it finds places, opens cards, turns layers on,
+                  plans routes and answers with figures from the property price register. It uses
+                  your own Anthropic, OpenAI or Google key.
+                </p>
+                <ul class="checks">
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>What a
+                    square metre of a flat or a plot costs nearby, with a chart of prices by year
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>The
+                    nearest shelter or defibrillator from where you are
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Tables
+                    and charts in answers, and answers to pick from when a question is unclear
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Dictate
+                    your question; the conversation history stays on your device only
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-check_circle" /></svg>Open a
+                    route or a place card again with one tap in the chat
+                  </li>
+                </ul>
+              </div>
+              <div class="feature__art">
+                <figure class="phone">
+                  <div class="phone__screen">
+                    <div class="phone__status" aria-hidden="true">
+                      9:41<svg viewBox="0 0 60 14"><use href="#status-icons" /></svg>
+                    </div>
+                    <img
+                      src="shots/assistant.webp"
+                      alt="The AI assistant on a phone: a question about flat prices and a card with the median price per square metre and a chart of prices by year"
+                      width="390"
+                      height="844"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </figure>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -2066,6 +2129,40 @@
               <p>
                 Yes. There are no fees, subscriptions, paid features or ads. You don't need an
                 account or an email address either.
+              </p>
+              <p>
+                The one exception is the AI assistant: it runs on your own API key, so you pay the
+                AI provider you chose directly for its questions.
+              </p>
+            </details>
+            <details>
+              <summary>
+                Is the AI assistant paid?<svg class="icon" aria-hidden="true">
+                  <use href="#i-keyboard_arrow_down" />
+                </svg>
+              </summary>
+              <p>
+                The app costs nothing and has no key of its own. The assistant uses the API key you
+                enter in the settings (Anthropic, OpenAI or Google), and you pay the provider
+                directly for your questions, at its prices.
+              </p>
+              <p>Without a key the assistant is off, and the rest of the app works as usual.</p>
+            </details>
+            <details>
+              <summary>
+                What does the AI assistant know about me?<svg class="icon" aria-hidden="true">
+                  <use href="#i-keyboard_arrow_down" />
+                </svg>
+              </summary>
+              <p>
+                The key stays in your browser and goes only to the provider you chose. The model
+                gets the conversation and what the map shows (the centre of the view, the layers
+                that are on), but not your GPS position. Asked for the nearest shelter, it sees only
+                the place found and its distance.
+              </p>
+              <p>
+                The conversation history is saved on your device only and can be turned off. The map
+                tools are also available to AI agents in the browser (WebMCP).
               </p>
             </details>
             <details>
