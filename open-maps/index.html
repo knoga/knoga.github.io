@@ -6,13 +6,13 @@
          keeps the first paint free of a stylesheet request. -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://open-maps-gh-pages.goatcounter.com; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <!--
       Landing page of Open Maps (ADR 0046). A plain static page deployed from landing/ to
       the root of the site folder (/open-maps/): no framework, no trackers, no external
-      fonts or scripts. The app lives in app/, with its own PWA scope that does not
+      fonts or scripts; only an anonymous visit count (GoatCounter pixel, ADR 0079). The app lives in app/, with its own PWA scope that does not
       include this page. Screenshots: npm run landing:shots.
     -->
     <title>Open Maps — darmowa mapa w przeglądarce, bez konta i bez reklam</title>
@@ -1950,8 +1950,8 @@
               </p>
               <h2 id="privacy-title">Twoje dane zostają u Ciebie</h2>
               <p>
-                Open Maps nie wymaga konta i nie zbiera statystyk. Nie wie, kim jesteś, i nie musi
-                tego wiedzieć.
+                Open Maps nie wymaga konta. Nie wie, kim jesteś, i nie musi tego wiedzieć. Liczymy
+                tylko, ile razy ktoś odwiedził stronę i otworzył aplikację.
               </p>
             </div>
             <ul class="privacy-grid">
@@ -1963,7 +1963,10 @@
               <li>
                 <svg class="icon" aria-hidden="true"><use href="#i-visibility_off" /></svg>
                 <h3>Bez reklam i śledzenia</h3>
-                <p>Na stronie i w aplikacji nie ma reklam, liczników odwiedzin ani profilowania.</p>
+                <p>
+                  Nie ma reklam ani profilowania. Licznik odwiedzin (GoatCounter) jest anonimowy:
+                  bez ciasteczek, bez Twojej pozycji i adresu IP.
+                </p>
               </li>
               <li>
                 <svg class="icon" aria-hidden="true"><use href="#i-house" /></svg>

@@ -96,4 +96,26 @@
     installButton.hidden = true;
     installLink.hidden = false;
   });
+
+  // Visit counter (ADR 0079): one anonymous GoatCounter hit per page view, said openly
+  // in the privacy section. Only the page (Polish or English) and the origin of another
+  // site the visit came from; no cookies. Not on a local preview or in tests.
+  var COUNTER = 'https://open-maps-gh-pages.goatcounter.com/count';
+  var local = /^(localhost$|127\.|192\.168\.|10\.|\[::1\]$)/.test(location.hostname);
+  if (!local && !navigator.webdriver) {
+    var params = new URLSearchParams({
+      p: /\/en\/$/.test(location.pathname) ? '/en/' : '/',
+      t: document.title,
+    });
+    try {
+      var from = new URL(document.referrer).origin;
+      if (from !== location.origin) params.set('r', from);
+    } catch (e) {
+      // No referrer, or not a URL.
+    }
+    params.set('rnd', Math.random().toString(36).slice(2));
+    var pixel = new Image();
+    pixel.referrerPolicy = 'no-referrer';
+    pixel.src = COUNTER + '?' + params.toString();
+  }
 })();

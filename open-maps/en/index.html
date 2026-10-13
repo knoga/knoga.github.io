@@ -6,7 +6,7 @@
          keeps the first paint free of a stylesheet request. -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://open-maps-gh-pages.goatcounter.com; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <!--
@@ -14,6 +14,7 @@
       /open-maps/en/. Same sections, styles and icons as the Polish page (landing/index.html,
       the x-default); keep the two in step. No automatic language redirect: the pages link
       each other (hreflang, the EN/PL switch). Screenshots: npm run landing:shots (en/shots/).
+      Only an anonymous visit count (GoatCounter pixel, ADR 0079), no trackers.
     -->
     <title>Open Maps — a free map in your browser, no account, no ads</title>
     <meta
@@ -1989,8 +1990,8 @@
               </p>
               <h2 id="privacy-title">Your data stays with you</h2>
               <p>
-                Open Maps needs no account and collects no statistics. It doesn't know who you are,
-                and it doesn't need to.
+                Open Maps needs no account. It doesn't know who you are, and it doesn't need to. We
+                only count how many times someone visits this page and opens the app.
               </p>
             </div>
             <ul class="privacy-grid">
@@ -2002,7 +2003,10 @@
               <li>
                 <svg class="icon" aria-hidden="true"><use href="#i-visibility_off" /></svg>
                 <h3>No ads or tracking</h3>
-                <p>No ads, visitor counters or profiling, on this page or in the app.</p>
+                <p>
+                  No ads or profiling. The visit counter (GoatCounter) is anonymous: no cookies, not
+                  your position or IP address.
+                </p>
               </li>
               <li>
                 <svg class="icon" aria-hidden="true"><use href="#i-house" /></svg>
