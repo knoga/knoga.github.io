@@ -1,0 +1,17 @@
+Copyright (c) 2026 the author of Open Maps (knoga.dev@gmail.com). All rights reserved.
+
+Open Maps, the web application published at https://knoga.github.io/open-maps/,
+is free for everyone to use.
+
+Its source code, and the built application and website files published on
+GitHub Pages, are proprietary. No licence is granted to copy, modify,
+distribute or use them, in whole or in part, without the written permission
+of the copyright holder.
+
+Third-party software keeps its own licence: see third-party-licenses.txt in
+the application folder (in the app: "O aplikacji" → "Licencje
+oprogramowania"). Map data and services are credited, with their licences,
+in "Źródła danych i licencje" in the app.
+
+Information in the application may be incomplete or out of date and is
+provided without warranty. In an emergency, call 112.
