@@ -2,8 +2,8 @@
   "source": "https://overpass-api.de/api/interpreter",
   "licence": "ODbL 1.0",
   "attribution": "© współtwórcy OpenStreetMap (ODbL)",
-  "osmTimestamp": "2026-10-14T06:54:21Z",
-  "downloaded": "2026-10-14T06:56:49.389Z",
+  "osmTimestamp": "2026-10-14T07:50:02Z",
+  "downloaded": "2026-10-14T07:52:13.527Z",
   "count": 2935,
   "dropped": {
     "charger not for cars": 104
