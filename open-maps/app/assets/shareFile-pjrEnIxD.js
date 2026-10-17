@@ -1,0 +1,1 @@
+function e(e){try{return typeof navigator.canShare==`function`&&navigator.canShare({files:[e]})}catch{return!1}}async function t(e,t){try{return await navigator.share({files:[e],title:t}),`shared`}catch(e){return e instanceof DOMException&&e.name===`AbortError`?`cancelled`:`failed`}}export{t as n,e as t};
