@@ -3,9 +3,9 @@
   "dataset": "https://dane.gov.pl/pl/dataset/28058",
   "licence": "CC BY 4.0",
   "attribution": "Punkty schronienia: KG PSP (CC BY 4.0)",
-  "sourceModified": "2026-10-12T07:57:27.000Z",
-  "downloaded": "2026-10-14T07:51:01.165Z",
-  "count": 86712,
-  "etag": "W/\"e8b372-1a12f1dd8e6\"",
+  "sourceModified": "2026-10-16T09:51:40.000Z",
+  "downloaded": "2026-10-17T10:08:06.132Z",
+  "count": 87162,
+  "etag": "W/\"e9f02b-1a1441fda9d\"",
   "dropped": {}
 }
