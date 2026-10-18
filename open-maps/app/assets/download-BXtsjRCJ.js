@@ -1,1 +1,0 @@
-import{Gc as e}from"./index-C__ubYTj.js";function t(e,t,r){n(new Blob([e],{type:t}),r)}function n(t,n){let r=URL.createObjectURL(t),i=document.createElement(`a`);i.href=r,i.download=n,i.rel=`noopener`,document.body.append(i),i.click(),i.remove(),e(`success`),window.setTimeout(()=>URL.revokeObjectURL(r),1e4)}export{t as n,n as t};
